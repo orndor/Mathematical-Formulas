@@ -1,4 +1,11 @@
-﻿using System;
+﻿// File name: Program.cs
+// Project Name: Mathematical-Formulas
+// Author: Orndoff, Robert K.
+// Date created: 07/10/2019
+// Date last modified: 07/10/2019
+// C#
+
+using System;
 
 namespace progex01
 {
@@ -7,7 +14,6 @@ namespace progex01
         static void Main(string[] args)
         {
             // Part 1
-            // Partially worked example
             Console.WriteLine("\nPart 1, circumference and area of a circle.");
             Console.Write("Enter an integer for the radius: ");
             string strradius = Console.ReadLine();
@@ -20,12 +26,11 @@ namespace progex01
             Console.WriteLine($"The area is {area}");
 
 
-
             // Part 2
 
             // Implementation here
             Console.WriteLine("\nPart 2, volume of a hemisphere.");
-            double volume = ((4 / 3) * Math.PI * (Math.Pow(intradius, 3))) / 2;
+            double volume = 4/3.0 * Math.PI * Math.Pow(intradius, 3)/2;
             Console.WriteLine($"The volume is {volume}");
 
 
@@ -51,7 +56,18 @@ namespace progex01
             Console.WriteLine("\nPart 4, solving a quadratic equation.");
 
             // Implementation here
-
+            Console.Write("Enter coefficient a: ");
+            string strcoeffa = Console.ReadLine();
+            int intcoeffa= int.Parse(strcoeffa);
+            Console.Write("Enter coefficient b: ");
+            string strcoeffb = Console.ReadLine();
+            int intcoeffb = int.Parse(strcoeffb);
+            Console.Write("Enter coefficient c: ");
+            string strcoeffc = Console.ReadLine();
+            int intcoeffc = int.Parse(strcoeffc);
+            double positive_num = -intcoeffb + Math.Sqrt(Math.Pow(intcoeffb, 2) - (4 * intcoeffa * intcoeffc));
+            double negative_num = -intcoeffb - Math.Sqrt(Math.Pow(intcoeffb, 2) - (4 * intcoeffa * intcoeffc));
+            double denominator = 2 * intcoeffa;
             Console.WriteLine($"The positive solution is {positive_num / denominator}");
             Console.WriteLine($"The negative solution is {negative_num / denominator}");
         }
